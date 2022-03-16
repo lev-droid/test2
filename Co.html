@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html class="webkit chrome chrome99 win js retina_1x hidpi datauri minw_1200 orientation_landscape"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>sigma</title>
+<meta property="og:title" content="sigma owns u">
+<meta property="og:image" content="/kitty.gif">
+<meta name="theme-color" content="#FFD2FF">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./os-font.css">
+<link rel="icon" href="https://c0dy.cc/icon.ico" type="image/gif">
+</head>
+<body bgcolor="#000000">
+    <div id="center">
+        <img src="./MLP.gif" alt="">
+
+        <center>
+            <h1><p class="os-font os-font-flash2 os-font-scroll"><div class="os-font-scrollable-wrapper"><div class="os-font-scrollable">sigma owns u</div></div></p></h1>
+            <a href="https://github.com/ubu12/" target="_blank">github</a> ~
+            <a href="https://twitter.com/alpgalpasdasdlj" target="_blank">twitter</a> ~
+            <a href="mailto:SocialJusticeUnion@protonmail.com" target="_blank">mail</a>
+
+        </center>
+    </div>
+<audio src="ambience.mp3" id="audio" controls="" loop="" autoplay="true">
+<script>
+                document.currentScript.parentElement.volume = 0.1;
+            </script>
+</audio>
+<script type="text/javascript" src="./os-font.js.download"></script>
+<script type="text/javascript">
+            OsFont.compile();
+        </script>
+<script src="./three.js.download"></script>
+<script src="./title.js.download"></script>
+<script src="./css_browser_selector.js.download"></script>
+<a class="goto-top" href="https://c0dy.cc/#gotop"></a>
+<script>
+                var scene = new THREE.Scene();
+                var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.001, 1000);
+
+                var renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                document.body.appendChild(renderer.domElement);
+
+                window.addEventListener('resize', function() {
+                        renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+
+                var geometry = new THREE.SphereGeometry();
+                var wireframe = new THREE.WireframeGeometry(geometry);
+                var line = new THREE.LineSegments(wireframe);
+                line.material.depthTest = false;
+                line.material.opacity = 0.8;
+                line.material.color = new THREE.Color(0xFFB2FC)
+                line.material.transparent = true;
+                scene.add(line);
+
+                camera.position.z = 1;
+
+                var animate = function () {
+                        requestAnimationFrame(animate);
+                        line.rotation.x += 0.005;
+                        line.rotation.y += 0.005;
+                        renderer.render(scene, camera);
+                };
+
+                animate();
+        </script><canvas ></canvas>
+</body></html>
