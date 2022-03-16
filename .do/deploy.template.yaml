@@ -1,0 +1,8 @@
+spec:
+  name: test2
+  static_sites:
+  - environment_slug: html
+    git:
+      branch: main
+      repo_clone_url: https://github.com/ubu12/test2.git
+    name: test2
