@@ -1,0 +1,8 @@
+name: test2
+static_sites:
+- environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: ubu12/test2
+  name: test2
