@@ -35,12 +35,33 @@ color: #CCCCCC;
 #center {               
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 25%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+}
+
+#belowcenter {               
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+#terminal{
+
+    border-radius: 25px;
+    border: 2px solid #ff03ff;
+    padding: 15px;
+    width: 200px;
+    height: 150px;
+    padding-right: 0px;
+
 }
 
 #iframee {

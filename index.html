@@ -1,69 +1,163 @@
 <!DOCTYPE html>
 
-<html class="webkit chrome chrome99 win js retina_1x hidpi datauri minw_1200 orientation_landscape"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>sigma</title>
-<meta property="og:title" content="sigma owns u">
-<meta property="og:image" content="/kitty.gif">
-<meta name="theme-color" content="#FFD2FF">
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="./os-font.css">
-<link rel="icon" href="https://c0dy.cc/icon.ico" type="image/gif">
+<html class="webkit chrome chrome99 win js retina_1x hidpi datauri minw_1200 orientation_landscape">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>sigma</title>
+    <meta property="og:title" content="sigma owns u">
+    <meta property="og:image" content="/kitty.gif">
+    <meta name="theme-color" content="#FFD2FF">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./os-font.css">
+    <link rel="stylesheet" href="./xterm.css">
+    <link rel="icon" href="https://c0dy.cc/icon.ico" type="image/gif">
 </head>
+
 <body bgcolor="#000000">
     <div id="center">
         <img src="./MLP.gif" alt="">
 
         <center>
-            <h1><p class="os-font os-font-flash2 os-font-scroll"><div class="os-font-scrollable-wrapper"><div class="os-font-scrollable">sigma owns u</div></div></p></h1>
+            <h1>
+                <p class="os-font os-font-flash2 os-font-scroll">
+                <div class="os-font-scrollable-wrapper">
+                    <div class="os-font-scrollable">sigma owns u</div>
+                </div>
+                </p>
+            </h1>
             <a href="https://github.com/ubu12/" target="_blank">github</a> ~
             <a href="https://twitter.com/alpgalpasdasdlj" target="_blank">twitter</a> ~
             <a href="mailto:SocialJusticeUnion@protonmail.com" target="_blank">mail</a>
 
+
         </center>
+
     </div>
-<audio src="ambience.mp3" id="audio" controls="" loop="" autoplay="true">
-<script>
-                document.currentScript.parentElement.volume = 0.1;
-            </script>
-</audio>
-<script type="text/javascript" src="./os-font.js.download"></script>
-<script type="text/javascript">
-            OsFont.compile();
+    <div id="belowcenter">
+
+        <div style="height: 250px; width: 600px;" id="terminal"></div>
+
+
+    </div>
+    <audio src="ambience.mp3" id="audio" controls="" loop="" autoplay="true">
+        <script>
+            document.currentScript.parentElement.volume = 0.1;
         </script>
-<script src="./three.js.download"></script>
-<script src="./title.js.download"></script>
-<script src="./css_browser_selector.js.download"></script>
-<a class="goto-top" href="https://c0dy.cc/#gotop"></a>
-<script>
-                var scene = new THREE.Scene();
-                var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.001, 1000);
+    </audio>
+    <script type="text/javascript" src="./os-font.js.download"></script>
+    <script type="text/javascript">
+        OsFont.compile();
+    </script>
+    <script src="./three.js.download"></script>
+    <script src="./xterm.js"></script>
+    <script src="./xterm-addon-fit.js"></script>
 
-                var renderer = new THREE.WebGLRenderer();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                document.body.appendChild(renderer.domElement);
+    <script src="./css_browser_selector.js.download"></script>
+    <a class="goto-top" href="https://c0dy.cc/#gotop"></a>
+    <script>
 
-                window.addEventListener('resize', function() {
-                        renderer.setSize(window.innerWidth, window.innerHeight);
-                });
+        var baseTheme = {
+            foreground: '#eff0eb',
+            background: '#282a36',
+            selection: '#97979b33',
+            black: '#282a36',
+            brightBlack: '#686868',
+            red: '#ff5c57',
+            brightRed: '#ff5c57',
+            green: '#5af78e',
+            brightGreen: '#5af78e',
+            yellow: '#f3f99d',
+            brightYellow: '#f3f99d',
+            blue: '#57c7ff',
+            brightBlue: '#57c7ff',
+            magenta: '#ff6ac1',
+            brightMagenta: '#ff6ac1',
+            cyan: '#9aedfe',
+            brightCyan: '#9aedfe',
+            white: '#f1f1f0',
+            brightWhite: '#eff0eb'
+        };
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.001, 1000);
 
-                var geometry = new THREE.SphereGeometry();
-                var wireframe = new THREE.WireframeGeometry(geometry);
-                var line = new THREE.LineSegments(wireframe);
-                line.material.depthTest = false;
-                line.material.opacity = 0.8;
-                line.material.color = new THREE.Color(0xFFB2FC)
-                line.material.transparent = true;
-                scene.add(line);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
-                camera.position.z = 1;
+        window.addEventListener('resize', function () {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
 
-                var animate = function () {
-                        requestAnimationFrame(animate);
-                        line.rotation.x += 0.005;
-                        line.rotation.y += 0.005;
-                        renderer.render(scene, camera);
-                };
+        var geometry = new THREE.SphereGeometry();
+        var wireframe = new THREE.WireframeGeometry(geometry);
+        var line = new THREE.LineSegments(wireframe);
+        line.material.depthTest = false;
+        line.material.opacity = 0.8;
+        line.material.color = new THREE.Color(0xFFB2FC)
+        line.material.transparent = true;
+        scene.add(line);
 
-                animate();
-        </script><canvas ></canvas>
-</body></html>
+        camera.position.z = 1;
+
+        var animate = function () {
+            requestAnimationFrame(animate);
+            line.rotation.x += 0.005;
+            line.rotation.y += 0.005;
+            renderer.render(scene, camera);
+        };
+
+        var term = new Terminal({
+
+            fontFamily: '"Cascadia Code", Menlo, monospace',
+            theme: baseTheme,
+            cursorBlink: true,
+            scrollback: 0
+
+        });
+        function newEvent(curr_line){
+            switch(curr_line){
+                case "ls":
+                    term.write("My work | sources | you are a monkey")
+                    this.prompt();
+
+
+            }
+        }
+        var fitAddon = new FitAddon.FitAddon();
+        term.loadAddon(fitAddon);
+        term.open(document.getElementById('terminal'));
+        fitAddon.fit();
+        var curr_line = "";
+        term.write('\u001b[35m' + 'sigma@home$ ')
+        term.onKey(key => {
+            const char = key.domEvent.key;
+            if (char === "Enter") {
+                this.prompt();
+                newEvent(curr_line)
+                curr_line = "";
+            } else if (char === "Backspace") {
+
+                if (term._core.buffer.x > 12 && curr_line.length > 0) {
+                    term.write("\b \b");
+                    curr_line = curr_line.slice(0, curr_line.length - 1);
+                    
+
+                }
+            } else {
+                term.write("\u001b[0m" + char);
+                curr_line += char;
+                console.log(curr_line);
+            }
+        });
+        prompt = () => {
+            var shellprompt = "\u001b[35m" + "sigma@home$ ";
+            term.write("\r\n" + shellprompt);
+        };
+
+
+        animate();
+    </script><canvas></canvas>
+</body>
+
+</html>
