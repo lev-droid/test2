@@ -118,7 +118,15 @@
         function newEvent(curr_line){
             switch(curr_line){
                 case "ls":
-                    term.write("My work | sources | you are a monkey")
+                    term.write("\u001b[1;36m" + "work.txt | sources.txt | monkeygang.txt")
+                    this.prompt();
+                    break;
+                case "cat work.txt": 
+                    term.write("\u001b[1;34m" + "loggey | misc | cheats")
+                    this.prompt();
+                    break;
+                default:
+                    term.write("\u001b[1;37m" + "Error: unknown command")
                     this.prompt();
 
 
